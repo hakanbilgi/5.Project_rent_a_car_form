@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+
+    <style>
+      body {
+        width: 75%;
+        margin: 10px auto;
+        font-size: 20px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        background-color: rgb(237, 229, 218);
+      }
+      h1 {
+        text-align: center;
+        color: rgb(157, 23, 110);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        color: rgb(121, 21, 21);
+      }
+      p {
+        text-align: center;
+        color: crimson;
+      }
+      form {
+        max-width: 70%;
+        margin: 0 auto;
+        background-color: rgb(246, 233, 229);
+      }
+      fieldset {
+        border: 5px solid darkorange;
+      }
+      div {
+        margin-bottom: 10px;
+      }
+      label {
+        display: inline-block;
+        width: 100%;
+      }
+      #sozlesme {
+        resize: none;
+        width: 80%;
+        height: 100px;
+        margin: 0 10%;
+      }
+      .buton {
+        background-color: #306f09;
+        color: white;
+        font-weight: bolder;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .reset {
+        background-color: #c126bb;
+        color: white;
+        font-weight: bolder;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .buton:hover {
+        color: black;
+      }
+      .reset:hover {
+        color: black;
+      }
+      .butons {
+        text-align: center;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BEYZADE RENT A CAR</h1>
+    <h2>Araç Kiralama Sözleşmesi</h2>
+    <p>Formu Eksiksiz Olarak Doldurunuz!</p>
+
+    <form action="result.html" method="get">
+      <div id="kisisel">
+        <fieldset>
+          <legend>Kişisel Bilgiler</legend>
+          <label for="tc">TC Kimlik No</label>
+          <input
+            type="text"
+            name="Girilen_Kimlik_No"
+            id="tc"
+            maxlength="11"
+            minlength="11"
+            required
+          /><br /><br />
+          <label for="isim">İsim</label>
+          <input
+            type="text"
+            name="Girilen_Isim"
+            id="isim"
+            required
+          /><br /><br />
+          <label for="soyad">Soy İsim</label>
+          <input
+            type="text"
+            name="Girilen_Soy_Isim"
+            id="soyad"
+            required
+          /><br /><br />
+          <label for="doğumtarihi">Doğum Tarihi</label>
+          <input
+            type="date"
+            name="Girilen_Dogum_Tarihi"
+            id="doğumtarihi"
+            required
+          /><br /><br />
+          <label for="Email">Mail Adresi</label>
+          <input
+            type="email"
+            name="Girilen_Email"
+            id="Email"
+            required
+          /><br /><br />
+          <label for="ehliyetfoto">Ehliyet Fotoğrafı Ekle</label>
+          <input
+            type="file"
+            name="Girilen_Ehliyet_Foto"
+            id="ehliyetfoto"
+            required
+          /><br /><br />
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <fieldset>
+          <legend>Araç Bilgileri</legend>
+          <label for="marka">Araç Markası</label>
+          <select name="Girilen_Arac_Markasi" id="marka">
+            <option value="Seçim Yapınız">Seçim Yapınız</option>
+            <option value="Audi">Audi</option>
+            <option value="Alfa Romeo">Alfa Romeo</option>
+            <option value="BMV">BMV</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Renault">Renault</option>
+            <option value="Ford">Ford</option>
+            <option value="Volswagen">Volswagen</option>
+          </select>
+          <br /><br />
+          <label for="renk">Araç Rengi</label>
+          <select name="Girilen_Arac_Rengi" id="renk">
+            <option value="Seçim Yapınız">Seçim Yapınız</option>
+            <option value="Beyaz">Beyaz</option>
+            <option value="Kırmızı">Kırmızı</option>
+            <option value="Siyah">Siyah</option>
+            <option value="Füme">Füme</option>
+            <option value="Gri">Gri</option>
+            <option value="Mavi">Mavi</option>
+            <option value="Sarı">Sarı</option>
+          </select>
+          <br /><br />
+          <label for="yakıt">Yakıt Türü</label>
+          <select name="Girilen_Arac_Yakiti" id="yakıt">
+            <option value="Seçim Yapınız">Seçim Yapınız</option>
+            <option value="Benzin">Benzin</option>
+            <option value="Dizel">Dizel</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Elektrik">Elektrik</option>
+          </select>
+          <br /><br />
+          <label for="vites">Vites Türü</label>
+          <select name="Girilen_Arac_Vitesi" id="yakıt">
+            <option value="Seçim Yapınız">Seçim Yapınız</option>
+            <option value="Manuel">Manuel</option>
+            <option value="Otomatik">Otomatik</option>
+            <option value="Triptronic">Triptronic</option>
+          </select>
+          <br /><br />
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Kiralama Bilgileri</legend>
+          <label for="alıştarih">Araç Alış Tarihi</label>
+          <input
+            type="date"
+            name="Arac_Alıs_Tarihi"
+            id="alıştarih"
+            required
+          /><br /><br />
+          <label for="alışsaati">Araç Alış Saati</label>
+          <input
+            type="time"
+            name="Arac_Alıs_Saati"
+            id="alışsaati"
+            required
+          /><br /><br />
+          <label for="teslimtarihi">Araç Teslim Tarihi</label>
+          <input
+            type="date"
+            name="Araç_Teslim_Tarihi"
+            id="teslimtarihi"
+            required
+          /><br /><br />
+          <label for="teslimsaati">Araç Teslim Saati</label>
+          <input
+            type="time"
+            name="Arac_Teslim_Saati"
+            id="teslimsaati"
+            required
+          /><br /><br />
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Sözleşme Kopyası</legend>
+          <textarea name="Sözleşme" id="sozlesme">
+                    Lorem itextareasum dolor sit amet consectetur adipisicing elit. Sunt ratione, enim fugiat rerum suscipit quisquam repellat tempore, voluptatem nam, adipisci aspernatur voluptas sequi voluptatibus facilis impedit. Laudantium possimus saepe vel? Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit reprehenderit perferendis ex blanditiis dolor consectetur doloribus iure repellendus reiciendis ullam, exercitationem aperiam ad obcaecati veniam! Dolorum animi praesentium saepe cupiditate? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quis maxime natus impedit similique nesciunt. Optio assumenda non illum nam aliquam veniam dignissimos facilis harum ullam architecto, animi fuga consequatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolore error quod ipsa cumque doloribus corporis nemo fugiat nobis ex ducimus, commodi necessitatibus tempore non similique optio accusamus laboriosam autem! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur esse earum eligendi nostrum nihil ipsum quae numquam, voluptas atque, saepe labore tenetur maxime cupiditate id autem facilis temporibus voluptatem!
+
+                </textarea
+          ><br /><br />
+          <label for="sözleşmecopy"
+            >Sözleşme Kopyasını Mail Olarak İstiyorum.</label
+          >
+          <input
+            type="radio"
+            name="Sözleşme Kopyası"
+            id="sözleşmecopy"
+            required
+          /><br /><br />
+          <label for="söleşmecopy1"
+            >Sözleşme Kopyasını Mail Olarak İstemiyorum.</label
+          >
+          <input
+            type="radio"
+            name="Sözleşme Kopyası"
+            id="söleşmecopy1"
+            required
+          />
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Sözleşme Onay</legend>
+          <label for="onay"
+            >Bilgilerin doğruluğunu kabul ediyorum ve sözleşmeyi
+            onaylıyorum.</label
+          >
+          <input
+            type="checkbox"
+            name="Sözleşme Onayı"
+            id="onay"
+            value="Onaylandı"
+            required
+          />
+        </fieldset>
+      </div>
+      <div class="butons">
+        <input class="buton" type="button" value="Formu Gönder" />
+        <input class="reset" type="reset" value="Formu Temizle" />
+      </div>
+      <br /><br />
+    </form>
+  </body>
+</html>
